@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/src/views/style.css">
+        <title>ToDo</title>
+    </head>
+    <body>
+        <a href="/Home/index">ToDo home</a> <a href="/Home/uitlog">ToDo uitlog</a> ||
+        <a href="/View">Todo view list</a> <a href="/View/status">Todo view status</a> ||
+        <a href="/Todo/report">Todo report</a>
+        <h3>ToDo inloggen</h3>
+        <h3>{{ username }}</h3>
+            <form action="" method="post">
+                <div>
+                    <label for="username">Username</label>
+                    <input class="logvak" required type="text" name="username" placeholder="inlognaam">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input class="logvak" required type="password" name="password" placeholder="wachtwoord">
+                </div>
+                <div>
+                    <label for="knop">Inloggen?</label>
+                    <input class="logvak" name="knop" type="submit" value="login">
+                </div>
+                <div>
+                    <img src="/src/image/todo-house.jpg" alt='ToDo Home' width="800" height="548">
+                </div>
+            </form>
+    </body>
+</html>

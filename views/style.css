@@ -1,0 +1,29 @@
+body {
+    background-color: #ffd;
+    margin: 25px 100px 25px 100px;
+    word-wrap: break-word;
+}
+table {
+    border: 10px;
+    border-color: #aaa;
+    border-style: solid;
+    table-layout: fixed;
+    width: fit-content;
+    background-color: #dfa;
+    text-align: center;
+}
+th, td {
+    padding: 5px;
+    border-color: #ddd;
+}
+div {
+    margin-top: 20px;
+}
+label {
+    display: inline-block;
+    max-width: 45%;
+}
+.addvak, .edivak, .seqvak, .repvak, .seqbut, .statvak, .logvak {
+    position: absolute;
+    left: 50%;
+}

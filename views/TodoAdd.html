@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/src/views/style.css">
+        <title>ToDo</title>
+    </head>
+    <body>
+        <a href="/Home/index">ToDo home</a> ||
+        <a href="/View">Todo view list</a> <a href="/View/status">Todo view status</a> || 
+        <a href="/Todo/add">Todo add</a> <a href="/Todo/sequence">Todo sequence</a>
+        <a href="/Todo/report">Todo report</a> <a href="/Todo/status">Todo status</a>
+        <h3>ToDo add</h3>
+        <h3>{{ username }}</h3>
+        <form action="" method="post">
+            <div>
+                <label for="sequence">Wat eerst, of laatst</label>
+                <input class="addvak" required type="number" name="sequence" placeholder="volgorde">
+            </div>
+            <div>
+                <label for="username">Inlognaam</label>
+                <input class="addvak" required type="text" name="username" value="{{ username }}">
+            </div>
+            <div>
+                <label for="todo">Wat nog te doen?</label>
+                <input class="addvak" required type="text" name="todo" placeholder="toe doe">
+            </div>
+            <div>
+                <label for="begin">Begin datum</label>
+                <input class="addvak" required type="date" name="begin" placeholder="start">
+            </div>
+            <div>
+                <label for="finish">Eind datum</label>
+                <input class="addvak" required type="date" name="finish" placeholder="gereed">
+            </div>
+            <div>
+                <label for="status">Welke van de vier statussen?</label>
+                <select class="addvak" name="status">
+                    <option value ="new">new</option>
+                    <option value ="open">open</option>
+                    <option value ="ready">ready</option>
+                    <option value ="closed">closed</option>
+                </select>
+            </div>
+            <div>
+                <label for="knop">Alles ingevuld?</label>
+                <input class="addvak" name="knop" type="submit" value="Add">
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/src/views/style.css">
+        <title>ToDo</title>
+    </head>
+    <body>
+        <body><a href="/Home/index">ToDo home</a> ||
+        <a href="/View">Todo view list</a> <a href="/View/status">Todo view status</a> || 
+        <a href="/Todo/add">Todo add</a> <a href="/Todo/sequence">Todo sequence</a>
+        <a href="/Todo/report">Todo report</a> <a href="/Todo/status">Todo status</a>
+        <h3>ToDo sequence</h3>
+        <h3>{{ username }}</h3>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>sequence</th>
+                <th>todo</th>
+            </tr>
+        </table>
+        {% for mytodo in mytodos %}
+        <table>
+            <tr>
+                <td>{{ mytodo.id }}</td>
+                <td>{{ mytodo.sequence }}</td>
+                <td>{{ mytodo.todo }}</td>
+            </tr>
+        </table>
+        {% endfor %}
+        <br> 
+        <form action="" method ="post">
+            {% for mytodo in mytodos %}
+            <div>
+                <label for="sequence">{{  mytodo.id }} - {{ mytodo.todo }}</label>
+                <input class="seqvak"type="number" name="{{  mytodo.id }}" value="{{ mytodo.sequence }}">
+            </div>
+            {% endfor %}
+            <div>
+                <label for="knop">Sequence aangepast?</label>
+                <input class="seqbut" name="knop" type="submit" value="Edit">
+            </div>
+        </form>
+    </body>
+</html>

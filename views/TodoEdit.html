@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/src/views/style.css">
+        <title>ToDo</title>
+    </head>
+    <body>
+        <body><a href="/Home/index">ToDo home</a> ||
+        <a href="/View">Todo view list</a> <a href="/View/status">Todo view status</a> || 
+        <a href="/Todo/add">Todo add</a> <a href="/Todo/sequence">Todo sequence</a>
+        <a href="/Todo/report">Todo report</a> <a href="/Todo/status">Todo status</a>
+        <h3>ToDo edit</h3>
+        <h3>{{ username }}</h3>
+        <table>
+            <tr>
+                <th>id - seq.</th>
+                <th>username</th>
+                <th>todo</th>
+                <th>begin</th>
+                <th>finish</th>
+                <th>status</th>
+            </tr>
+        </table>
+        {% for mytodo in mytodos %}
+        <table>
+            <tr>
+                <td>{{ mytodo.id }} - {{ mytodo.sequence }}</td>
+                <td>{{ mytodo.username }}</td>
+                <td>{{ mytodo.todo }}</td>
+                <td>{{ mytodo.begin }}</td>
+                <td>{{ mytodo.finish }}</td>
+                <td>{{ mytodo.status }}</td>
+            </tr>
+        </table>
+        {% endfor %}
+        <br>
+        {% for mytodo in mytodos %}
+        <form action="" method="post">
+            <div>
+                <label for="id">Gekozen id:</label>
+                <input class="edivak" type="number" name="id" value="{{ mytodo.id }}">
+            </div>
+            <div>
+                <label for="sequence">Wat eerst, of laatst:</label>
+                <input class="edivak" type="number" name="sequence" value="{{ mytodo.sequence }}">
+            </div>
+            <div>
+                <label for="username">Inlognaam: {{ mytodo.username }}</label>
+            </div>
+            <div>
+                <label for="todo">Wat nog te doen:</label>
+                <input class="edivak" type="text" name="todo" value="{{ mytodo.todo }}">
+            </div>
+            <div>
+                <label for="begin">Begin datum:</label>
+                <input class="edivak" type="date" name="begin" value="{{ mytodo.begin }}">
+            </div>
+            <div>
+                <label for="finish">Eind datum:</label>
+                <input class="edivak" type="date" name="finish" value="{{ mytodo.finish }}">
+            </div>
+            <div>
+                <label for="status">Welke van de vier statussen:</label>
+                <select class="edivak" required name="status">
+                    <option value ="">change</option>
+                    <option value ="new">new</option>
+                    <option value ="open">open</option>
+                    <option value ="ready">ready</option>
+                    <option value ="closed">closed</option>
+                </select>
+            </div>
+            <div>
+                <label for="knop">Veld(en) aangepast?</label>
+                <input class="edivak" name="knop" type="submit" value="Edit">
+            </div>
+        </form>
+        {% endfor %}
+    </body>
+</html>

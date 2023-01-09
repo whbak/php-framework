@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/src/views/style.css">
+        <title>ToDo</title>
+    </head>
+    <body>
+        <a href="/Home/index">ToDo home</a> ||
+        <a href="/View">Todo view list</a> <a href="/View/status">Todo view status</a> || 
+        <a href="/Todo/add">Todo add</a> <a href="/Todo/sequence">Todo sequence</a>
+        <a href="/Todo/report">Todo report</a> <a href="/Todo/status">Todo status</a>
+        <h3>ToDo view status</h3>
+        <h3>Iedereen</h3>
+        <table>
+            <tr>
+                <th>todo</th>
+                <th>status</th>
+            </tr>
+        </table>
+        {% for mytodo in mytodos %}
+        <table>
+            <tr>
+                <td>{{ mytodo.todo }}</td>
+                <td>{{ mytodo.status }}</td>
+            </tr>
+        </table>
+        {% endfor %}
+    </body>
+</html>
