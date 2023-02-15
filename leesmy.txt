@@ -1,0 +1,14 @@
+Inloggen kan als volgt:
+
+bitacademy, markmeer, johndoe: password
+janedoe: password2
+
+Hierom:
+
+('bit_academy', '$2y$10$.FbHMaYJUhYSdQ0YLt/VWOXfHSgj8O3aJk0XBh20T28hUA/J2iClq'),
+('markmeer', '$2y$10$.FbHMaYJUhYSdQ0YLt/VWOXfHSgj8O3aJk0XBh20T28hUA/J2iClq'),
+('johndoe', '$2y$10$.FbHMaYJUhYSdQ0YLt/VWOXfHSgj8O3aJk0XBh20T28hUA/J2iClq'),
+('janedoe', '$2y$10$/d6fVe/JRcs0DLEH4HWlhejTX08yOqQlFsfOlnOIwMIYqUK1jBJUi');
+
+password: $2y$10$.FbHMaYJUhYSdQ0YLt/VWOXfHSgj8O3aJk0XBh20T28hUA/J2iClq
+password2: $2y$10$/d6fVe/JRcs0DLEH4HWlhejTX08yOqQlFsfOlnOIwMIYqUK1jBJUi

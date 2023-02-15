@@ -1,0 +1,14 @@
+WhatToDo-opzet
+
+v - RewriteRule ^(.*) src/index.php?url=$1
+v - home -> home index
+v - view list
+v - view status
+v - todoadd
+v - todoedit
+v - todo sequence
+v - todo status
+
+v - userlogin
+v - userservice (user validate)
+v - userlogout
